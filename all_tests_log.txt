@@ -1,0 +1,117 @@
+test_case_1 (__main__.TestCases)
+Submit empty form ... FAIL
+test_case_10 (__main__.TestCases)
+Submit form with data for 'Junior' classification: Lower bound ... FAIL
+test_case_11 (__main__.TestCases)
+Submit form with data for 'Junior' classification: Upper bound ... ok
+test_case_12 (__main__.TestCases)
+Submit form with data for 'Dorosly' classification: Lower bound ... FAIL
+test_case_13 (__main__.TestCases)
+Submit form with data for 'Dorosly' classification: Upper bound ... ok
+test_case_14 (__main__.TestCases)
+Submit form with data for 'Senior' classification ... FAIL
+test_case_2 (__main__.TestCases)
+Submit form without last name filled in ... ok
+test_case_3 (__main__.TestCases)
+Submit form without birth date filled in ... ok
+test_case_4 (__main__.TestCases)
+Submit form with invalid birth date but in correct form (as date) ... FAIL
+test_case_5 (__main__.TestCases)
+Submit form with birth date in invalid format ... ok
+test_case_6 (__main__.TestCases)
+Submit form with spaces as a birth date ... FAIL
+test_case_7 (__main__.TestCases)
+Submit form with data for person without classification ... ok
+test_case_8 (__main__.TestCases)
+Submit form with data for 'Mlodzik' classification: Lower bound ... FAIL
+test_case_9 (__main__.TestCases)
+Submit form with data for 'Mlodzik' classification: Upper bound ... ok
+
+======================================================================
+FAIL: test_case_1 (__main__.TestCases)
+Submit empty form
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "tests.py", line 62, in test_case_1
+    self.assertEqual(alert_text, expected_message)
+AssertionError: 'First name must be filled out' != 'Imie musi byc wypelnione'
+- First name must be filled out
++ Imie musi byc wypelnione
+
+
+======================================================================
+FAIL: test_case_10 (__main__.TestCases)
+Submit form with data for 'Junior' classification: Lower bound
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "tests.py", line 429, in test_case_10
+    self.assertEqual(alert_text, expected_message)
+AssertionError: 'Mlodzik' != 'Junior'
+- Mlodzik
++ Junior
+
+
+======================================================================
+FAIL: test_case_12 (__main__.TestCases)
+Submit form with data for 'Dorosly' classification: Lower bound
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "tests.py", line 520, in test_case_12
+    self.assertEqual(alert_text, expected_message)
+AssertionError: 'Blad danych' != 'Dorosly'
+- Blad danych
++ Dorosly
+
+
+======================================================================
+FAIL: test_case_14 (__main__.TestCases)
+Submit form with data for 'Senior' classification
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "tests.py", line 605, in test_case_14
+    self.assertEqual(alert_text, expected_message)
+AssertionError: 'Dorosly' != 'Senior'
+- Dorosly
++ Senior
+
+
+======================================================================
+FAIL: test_case_4 (__main__.TestCases)
+Submit form with invalid birth date but in correct form (as date)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "tests.py", line 156, in test_case_4
+    self.assertEqual(alert_text, expected_message)
+AssertionError: 'Brak kwalifikacji' != 'Blad danych'
+- Brak kwalifikacji
++ Blad danych
+
+
+======================================================================
+FAIL: test_case_6 (__main__.TestCases)
+Submit form with spaces as a birth date
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "tests.py", line 236, in test_case_6
+    self.assertEqual(alert_text, expected_message)
+AssertionError: 'Senior' != 'Blad danych'
+- Senior
++ Blad danych
+
+
+======================================================================
+FAIL: test_case_8 (__main__.TestCases)
+Submit form with data for 'Mlodzik' classification: Lower bound
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "tests.py", line 332, in test_case_8
+    self.assertEqual(alert_text, expected_message)
+AssertionError: 'Brak kwalifikacji' != 'Mlodzik'
+- Brak kwalifikacji
++ Mlodzik
+
+
+----------------------------------------------------------------------
+Ran 14 tests in 31.723s
+
+FAILED (failures=7)
